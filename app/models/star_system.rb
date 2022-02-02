@@ -1,0 +1,2 @@
+class StarSystem < ApplicationRecord
+end

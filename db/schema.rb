@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_01_171018) do
+ActiveRecord::Schema.define(version: 2022_02_02_010147) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "star_systems", force: :cascade do |t|
+    t.string "name"
+    t.integer "distance"
+    t.string "mission_complexity"
+    t.string "habitibility_chance"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"

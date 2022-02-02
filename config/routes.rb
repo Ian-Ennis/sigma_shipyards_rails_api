@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :star_systems, only: [:index]
 
   namespace :api do
     namespace :v1 do
