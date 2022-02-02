@@ -7,4 +7,8 @@ StarSystem.create(name: "Upsilon Andromedae", distance: 4.0, mission_complexity:
 puts "Systems created!"
 
 
+puts "Creating demo ship.."
 
+Spaceship.create(name: "Demo Ship")
+
+puts "Demo ship created"

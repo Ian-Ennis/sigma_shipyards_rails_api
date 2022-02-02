@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :spaceships, only: [:index, :create, :update, :destroy]
   resources :star_systems, only: [:index]
 
   namespace :api do

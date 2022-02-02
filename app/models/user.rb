@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+    # has_many :spaceships
 
     has_secure_password
     validates :username, uniqueness: { case_sensitive: false}
