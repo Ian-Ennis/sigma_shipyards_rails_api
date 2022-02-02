@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :hull_parts, only: [:index]
+  resources :engine_parts, only: [:index]
   resources :spaceships, only: [:index, :create, :update, :destroy]
   resources :star_systems, only: [:index]
 

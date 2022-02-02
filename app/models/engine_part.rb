@@ -1,0 +1,2 @@
+class EnginePart < ApplicationRecord
+end

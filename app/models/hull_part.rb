@@ -1,0 +1,2 @@
+class HullPart < ApplicationRecord
+end

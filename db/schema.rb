@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_02_171232) do
+ActiveRecord::Schema.define(version: 2022_02_02_182133) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "engine_parts", force: :cascade do |t|
+    t.string "part_name"
+    t.integer "tank_size"
+    t.integer "cost"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "hull_parts", force: :cascade do |t|
+    t.string "part_name"
+    t.integer "hull_strength"
+    t.integer "cost"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "spaceships", force: :cascade do |t|
     t.string "name"
