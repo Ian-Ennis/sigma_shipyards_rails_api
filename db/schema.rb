@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2022_02_02_182133) do
 
   create_table "engine_parts", force: :cascade do |t|
     t.string "part_name"
-    t.integer "tank_size"
+    t.integer "range"
     t.integer "cost"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2022_02_02_182133) do
   end
 
   create_table "spaceships", force: :cascade do |t|
-    t.string "name"
+    t.string "spaceship_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

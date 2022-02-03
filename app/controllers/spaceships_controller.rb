@@ -29,7 +29,7 @@ class SpaceshipsController < ApplicationController
     end
 
     def spaceship_params
-        params.permit(:name)
+        params.permit(:spaceship_name)
     end
 
     def unable_to_locate_spaceship
