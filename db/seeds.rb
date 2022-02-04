@@ -9,9 +9,9 @@ puts "Systems created!"
 
 puts "Creating demo ship.."
 
-Spaceship.create(spaceship_name: "Ship One")
-Spaceship.create(spaceship_name: "Ship Two")
-Spaceship.create(spaceship_name: "Ship Three")
+Spaceship.create(spaceship_name: "Pillar of Autumn")
+Spaceship.create(spaceship_name: "Enterprise")
+Spaceship.create(spaceship_name: "Rocinante")
 
 puts "Demo ship created"
 
@@ -28,5 +28,5 @@ puts "Engine parts created"
 puts "Creating hull parts.."
 HullPart.create(part_name: "Carbon Fiber Plating", hull_strength: 5, cost: 20000)
 HullPart.create(part_name: "Graphene Matrix", hull_strength: 15, cost: 90000)
-HullPart.create(part_name: "Neutrino Repulsor", hull_strength: 50, cost: 300000)
+HullPart.create(part_name: "Neutrino Repulsion System", hull_strength: 50, cost: 300000)
 puts "Hull parts created"
