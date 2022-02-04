@@ -9,7 +9,9 @@ puts "Systems created!"
 
 puts "Creating demo ship.."
 
-Spaceship.create(spaceship_name: "Demo Ship")
+Spaceship.create(spaceship_name: "Ship One")
+Spaceship.create(spaceship_name: "Ship Two")
+Spaceship.create(spaceship_name: "Ship Three")
 
 puts "Demo ship created"
 
