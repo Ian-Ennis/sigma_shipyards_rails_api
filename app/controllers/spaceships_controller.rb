@@ -6,8 +6,11 @@ class SpaceshipsController < ApplicationController
     end
 
     def create
+        puts '====inside create method===='
         spaceship = Spaceship.create!(spaceship_params)
+        puts spaceship 'is the spaceship'
         render json: spaceship, status: :created
+        puts '====leaving create method===='
     end
 
     def update
@@ -29,7 +32,7 @@ class SpaceshipsController < ApplicationController
     end
 
     def spaceship_params
-        params.permit(:spaceship_name)
+        params.require(:spaceship).permit(:spaceship_name, :user_id)    
     end
 
     def unable_to_locate_spaceship
