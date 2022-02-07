@@ -33,6 +33,9 @@ ActiveRecord::Schema.define(version: 2022_02_02_182133) do
 
   create_table "spaceships", force: :cascade do |t|
     t.string "spaceship_name"
+    t.integer "credits"
+    t.integer "range"
+    t.integer "strength"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
