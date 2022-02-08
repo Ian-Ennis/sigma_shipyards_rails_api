@@ -1,3 +1,3 @@
 class SpaceshipSerializer < ActiveModel::Serializer
-  attributes :id, :spaceship_name, :credits, :range, :strength
+  attributes :id, :user_id, :spaceship_name, :credits, :range, :strength
 end

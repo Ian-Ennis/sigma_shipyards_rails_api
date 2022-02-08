@@ -35,8 +35,8 @@ class SpaceshipsController < ApplicationController
 
     def spaceship_params
         params
-        .permit(:spaceship_name, :credits, :range, :strength)
-        .with_defaults(credits: 1000000, range: 0, strength: 0)
+        .permit(:user_id, :spaceship_name, :credits, :range, :strength)
+        .with_defaults(user_id: user.id, credits: 1000000, range: 0, strength: 0)
     end
 
     def unable_to_locate_spaceship

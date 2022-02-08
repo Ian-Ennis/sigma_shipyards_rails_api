@@ -1,9 +1,8 @@
 class User < ApplicationRecord
-    # has_many :spaceships
-
+    
     has_secure_password
     validates :username, uniqueness: { case_sensitive: false}
-
+    
     def authenticate(password)
         if BCrypt::Password.new(self.password_digest) == password
             self
@@ -11,4 +10,7 @@ class User < ApplicationRecord
             false
         end
     end
+
+    has_many :spaceships
+    
 end
