@@ -17,7 +17,7 @@ class SpaceshipsController < ApplicationController
 
     def update
         spaceship = find_spaceship
-        spaceship.update(spaceship_params)
+        spaceship.update!(spaceship_params_update)
         render json: spaceship
     end
 
@@ -37,6 +37,10 @@ class SpaceshipsController < ApplicationController
         params
         .permit(:user_id, :spaceship_name, :credits, :range, :strength)
         .with_defaults(user_id: user.id, credits: 1000000, range: 0, strength: 0)
+    end
+
+    def spaceship_params_update
+        params.permit(:user_id, :spaceship_name, :credits, :range, :strength)
     end
 
     def unable_to_locate_spaceship

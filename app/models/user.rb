@@ -11,6 +11,6 @@ class User < ApplicationRecord
         end
     end
 
-    has_many :spaceships
-    
+    # has_many :spaceships
+
 end
