@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  before_action :require_login
+  # before_action :require_login
 
   def encode_token(payload)
     puts "===entering encode_token (App controller)"
@@ -9,7 +9,7 @@ class ApplicationController < ActionController::API
 
   def auth_header
     puts "===entering auth_header (App controller)"
-      request.headers['Authorization']
+      request.headers['Authorization'].split(' ')[1]
     puts "===leaving auth header"
   end
 
@@ -17,9 +17,9 @@ class ApplicationController < ActionController::API
     puts "===entering decoded_token (App controller)"
       if auth_header
         puts "--> auth_header exists"
-          token = auth_header.split(' ')[1]
+          # token = auth_header
           begin
-              JWT.decode(token, '24nisfd892scazxbd843cs02e', true, algorithm: 'HS256')
+              JWT.decode(auth_header, '24nisfd892scazxbd843cs02e', true, algorithm: 'HS256')
           rescue JWT::DecodeError
               []
           end

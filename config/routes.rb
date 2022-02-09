@@ -5,12 +5,12 @@ Rails.application.routes.draw do
   resources :star_systems, only: [:index]
 
   # handles user signing up
-  resource :users, only: [:create] 
+  resource :users, only: [:index, :show, :create, :update, :destroy]
 
   # allows existing users to login (become authorized)
   post "/login", to: "auth#login"
 
-  # allows existing users to automatically log back in (re-authorized)
+  # allows existing users to automatically log back in (re-authorization)
   get "/auto_login", to: "auth#auto_login"
 
   # route only accessable to authorized users

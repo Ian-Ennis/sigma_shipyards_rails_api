@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
-    skip_before_action :require_login, only: [:create]
+    # skip_before_action :require_login, only: [:create]
 
       # handles user signing up
 
     def create 
         puts "===entering users create (Users controller)"
-        user = User.create(user_params)
+        user = User.create!(:username => params[:username], :password => params[:password])
         puts "***user: #{user}"
         if (user.valid?) 
             puts "-->user is valid"

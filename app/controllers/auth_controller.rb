@@ -1,11 +1,12 @@
 class AuthController < ApplicationController
-    skip_before_action :require_login, only: [:login, :auto_login]
+    # skip_before_action :require_login, only: [:login, :auto_login]
 
     # allows existing users to login (become authorized)
 
     def login 
         puts "===entering login (auth controller)"
-        @user = User.find_by(username: params[:username])
+        user = User.find_by(username: params[:username])
+        # debugger
         if user && user.authenticate(params[:password])
             puts "***user exists, is authenticated"
                 payload = {user_id: user.id}
