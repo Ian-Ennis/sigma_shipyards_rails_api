@@ -35,12 +35,12 @@ class SpaceshipsController < ApplicationController
 
     def spaceship_params
         params
-        .permit(:spaceship_name, :credits, :range, :strength)
-        .with_defaults(credits: 1000000, range: 0, strength: 0)
+        .permit(:spaceship_name, :credits, :range, :strength, :nuclearCount, :fusionCount, :antimatterCount, :carbonCount, :grapheneCount, :neutrinoCount)
+        .with_defaults(credits: 1000000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutrinoCount: 0)
     end
 
     def spaceship_params_update
-        params.permit(:user_id, :spaceship_name, :credits, :range, :strength)
+        params.permit(:spaceship_name, :credits, :range, :strength, :nuclearCount, :fusionCount, :antimatterCount, :carbonCount, :grapheneCount, :neutrinoCount)
     end
 
     def unable_to_locate_spaceship

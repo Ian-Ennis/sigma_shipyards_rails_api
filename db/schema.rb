@@ -36,6 +36,12 @@ ActiveRecord::Schema.define(version: 2022_02_02_182133) do
     t.integer "credits"
     t.integer "range"
     t.integer "strength"
+    t.integer "nuclearCount"
+    t.integer "fusionCount"
+    t.integer "antimatterCount"
+    t.integer "carbonCount"
+    t.integer "grapheneCount"
+    t.integer "neutrinoCount"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

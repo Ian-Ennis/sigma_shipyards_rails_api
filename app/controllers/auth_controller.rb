@@ -3,6 +3,7 @@ class AuthController < ApplicationController
 
     # allows existing users to login (become authorized)
 
+    # send token back with this method
     def login 
         puts "===entering login (auth controller)"
         user = User.find_by(username: params[:username])
@@ -17,6 +18,7 @@ class AuthController < ApplicationController
         end
     end
 
+    # comment out 
     def auto_login
         puts "===entering auto_login (auth controller)"
         if session_user
@@ -26,7 +28,6 @@ class AuthController < ApplicationController
             render json: {errors: "No user logged in (from auth controller)"}
         end
         puts "===leaving auto_login (auth controller)"
-
     end
 
     def user_is_authed
