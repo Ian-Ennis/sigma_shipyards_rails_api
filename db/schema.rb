@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2022_02_02_182133) do
     t.integer "distance"
     t.string "mission_complexity"
     t.string "habitibility_chance"
+    t.integer "shields_required"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
