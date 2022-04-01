@@ -1,20 +1,11 @@
 Rails.application.routes.draw do
+  resource :users
   resources :hull_parts, only: [:index]
   resources :engine_parts, only: [:index]
-  resources :spaceships, only: [:index, :show, :create, :update, :destroy]
-  resources :star_systems, only: [:index]
+  resources :spaceships
+  resources :star_systems
 
-  # handles user signing up
-  resource :users, only: [:index, :show, :create, :update, :destroy]
-
-  # allows existing users to login (become authorized)
   post "/login", to: "auth#login"
-
-  # allows existing users to automatically log back in (re-authorization)
-  get "/auto_login", to: "auth#auto_login"
-
-  # route only accessable to authorized users
-  get "/user_is_authed", to: "auth#user_is_authed"
 
   get '*path',
       to: 'fallback#index',
