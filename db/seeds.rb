@@ -9,9 +9,9 @@ puts "Systems created!"
 
 puts "Creating demo ship.."
 
-Spaceship.create(spaceship_name: "Pillar of Autumn", credits: 1000000, range: 0, strength: 0)
-Spaceship.create(spaceship_name: "Enterprise", credits: 1000000, range: 0, strength: 0)
-Spaceship.create(spaceship_name: "Rocinante", credits: 1000000, range: 0, strength: 0)
+Spaceship.create(spaceship_name: "Pillar of Autumn", credits: 1000000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutrinoCount: 0)
+Spaceship.create(spaceship_name: "Enterprise", credits: 1000000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutrinoCount: 0)
+Spaceship.create(spaceship_name: "Rocinante", credits: 1000000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutrinoCount: 0)
 
 puts "Demo ship created"
 
