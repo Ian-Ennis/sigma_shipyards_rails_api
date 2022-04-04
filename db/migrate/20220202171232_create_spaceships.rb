@@ -5,6 +5,12 @@ class CreateSpaceships < ActiveRecord::Migration[7.0]
       t.integer :credits
       t.integer :range
       t.integer :strength
+      t.integer :nuclearCount
+      t.integer :fusionCount
+      t.integer :antimatterCount
+      t.integer :carbonCount
+      t.integer :grapheneCount
+      t.integer :neutrinoCount
       t.references :user, type: :integer
 
       t.timestamps
