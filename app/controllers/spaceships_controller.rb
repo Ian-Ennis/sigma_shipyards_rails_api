@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class SpaceshipsController < ApplicationController
-rescue_from ActiveRecord::RecordNotFound, with: :unable_to_locate_spaceship
+  rescue_from ActiveRecord::RecordNotFound, with: :unable_to_locate_spaceship
 
   def index
     render json: Spaceship.all, status: :ok
@@ -10,7 +12,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :unable_to_locate_spaceship
     render json: spaceship, status: :created
   end
 
-  def show 
+  def show
     spaceship = find_spaceship
     render json: spaceship
   end
@@ -35,16 +37,16 @@ rescue_from ActiveRecord::RecordNotFound, with: :unable_to_locate_spaceship
 
   def spaceship_params
     params
-    .permit(:spaceship_name, :credits, :range, :strength, :nuclearCount, :fusionCount, :antimatterCount, :carbonCount, :grapheneCount, :neutronCount)
-    .with_defaults(credits: 1000000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutronCount: 0)
+      .permit(:spaceship_name, :credits, :range, :strength, :nuclearCount, :fusionCount, :antimatterCount, :carbonCount, :grapheneCount, :neutronCount)
+      .with_defaults(credits: 1_000_000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutronCount: 0)
   end
 
   def spaceship_params_update
-    params.permit(:spaceship_name, :credits, :range, :strength, :nuclearCount, :fusionCount, :antimatterCount, :carbonCount, :grapheneCount, :neutronCount)
+    params.permit(:spaceship_name, :credits, :range, :strength, :nuclearCount, :fusionCount, :antimatterCount,
+                  :carbonCount, :grapheneCount, :neutronCount)
   end
 
   def unable_to_locate_spaceship
-    render json: { error: "Spaceship not found" }, status: :not_found
+    render json: { error: 'Spaceship not found' }, status: :not_found
   end
-
 end

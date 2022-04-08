@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class EnginePartsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :engine_parts_not_found
 
@@ -8,7 +10,6 @@ class EnginePartsController < ApplicationController
   private
 
   def engine_parts_not_found
-    render json: { error: "Engine part not found" }, status: :not_found
+    render json: { error: 'Engine part not found' }, status: :not_found
   end
-
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   resource :users
   resources :hull_parts, only: [:index]
@@ -5,7 +7,7 @@ Rails.application.routes.draw do
   resources :spaceships
   resources :star_systems
 
-  post "/login", to: "auth#login"
+  post '/login', to: 'auth#login'
 
   get '*path',
       to: 'fallback#index',

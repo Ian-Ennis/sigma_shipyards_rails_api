@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class HullPartsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :hull_parts_not_found
 
@@ -8,7 +10,6 @@ class HullPartsController < ApplicationController
   private
 
   def hull_parts_not_found
-    render json: { error: "Hull part not found" }, status: :not_found
+    render json: { error: 'Hull part not found' }, status: :not_found
   end
-
 end
