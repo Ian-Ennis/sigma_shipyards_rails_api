@@ -3,6 +3,7 @@
 * bundle
   ```sh
   bundle install
+* start the server
   rails server
   ```
 
