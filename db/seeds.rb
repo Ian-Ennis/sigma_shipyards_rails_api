@@ -1,17 +1,17 @@
 puts "Creating star systems.."
 
-StarSystem.create(name: "Proxima Centauri", distance: 4.2, mission_complexity: "Low", habitibility_chance: 35)
-StarSystem.create(name: "Tau Ceti", distance: 11.9, mission_complexity: "Moderate", habitibility_chance: 60)
-StarSystem.create(name: "Upsilon Andromedae", distance: 4.0, mission_complexity: "High", habitibility_chance: 80)
+StarSystem.create(name: "Proxima Centauri", distance: 4, mission_complexity: "Low", habitibility_chance: 35, shields_required: 50)
+StarSystem.create(name: "Tau Ceti", distance: 12, mission_complexity: "Moderate", habitibility_chance: 60, shields_required: 80)
+StarSystem.create(name: "Upsilon Andromedae", distance: 44, mission_complexity: "High", habitibility_chance: 80, shields_required: 120)
 
 puts "Systems created!"
 
 
 puts "Creating demo ship.."
 
-Spaceship.create(spaceship_name: "Pillar of Autumn", credits: 1000000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutrinoCount: 0)
-Spaceship.create(spaceship_name: "Enterprise", credits: 1000000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutrinoCount: 0)
-Spaceship.create(spaceship_name: "Rocinante", credits: 1000000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutrinoCount: 0)
+Spaceship.create(spaceship_name: "Pillar of Autumn", credits: 1000000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutronCount: 0)
+Spaceship.create(spaceship_name: "Enterprise", credits: 1000000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutronCount: 0)
+Spaceship.create(spaceship_name: "Rocinante", credits: 1000000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutronCount: 0)
 
 puts "Demo ship created"
 
@@ -26,7 +26,7 @@ puts "Engine parts created"
 
 
 puts "Creating hull parts.."
-HullPart.create(part_name: "Carbon Fiber Plating", hull_strength: 5, cost: 20000)
+HullPart.create(part_name: "Carbon Fiber", hull_strength: 5, cost: 20000)
 HullPart.create(part_name: "Graphene Matrix", hull_strength: 15, cost: 90000)
-HullPart.create(part_name: "Neutrino Repulsor", hull_strength: 50, cost: 300000)
+HullPart.create(part_name: "Neutron Repulsor", hull_strength: 50, cost: 300000)
 puts "Hull parts created"

@@ -10,7 +10,7 @@ class CreateSpaceships < ActiveRecord::Migration[7.0]
       t.integer :antimatterCount
       t.integer :carbonCount
       t.integer :grapheneCount
-      t.integer :neutrinoCount
+      t.integer :neutronCount
       t.references :user, type: :integer
 
       t.timestamps

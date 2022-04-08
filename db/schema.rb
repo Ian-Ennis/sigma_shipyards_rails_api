@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 2022_02_02_182133) do
     t.integer "antimatterCount"
     t.integer "carbonCount"
     t.integer "grapheneCount"
-    t.integer "neutrinoCount"
+    t.integer "neutronCount"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -52,7 +52,8 @@ ActiveRecord::Schema.define(version: 2022_02_02_182133) do
     t.string "name"
     t.integer "distance"
     t.string "mission_complexity"
-    t.string "habitibility_chance"
+    t.integer "habitibility_chance"
+    t.integer "shields_required"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

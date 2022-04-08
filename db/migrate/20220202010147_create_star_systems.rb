@@ -4,7 +4,8 @@ class CreateStarSystems < ActiveRecord::Migration[7.0]
       t.string :name
       t.integer :distance
       t.string :mission_complexity
-      t.string :habitibility_chance
+      t.integer :habitibility_chance
+      t.integer :shields_required
 
       t.timestamps
     end

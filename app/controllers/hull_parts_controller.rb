@@ -1,16 +1,14 @@
 class HullPartsController < ApplicationController
-    rescue_from ActiveRecord::RecordNotFound, with: :hull_parts_not_found
+  rescue_from ActiveRecord::RecordNotFound, with: :hull_parts_not_found
 
+  def index
+    render json: HullPart.all, status: :ok
+  end
 
-    def index
-        render json: HullPart.all, status: :ok
-    end
+  private
 
-    private
-
-    def hull_parts_not_found
-        render json: { error: "Hull part not found" }, status: :not_found
-    end
-
+  def hull_parts_not_found
+    render json: { error: "Hull part not found" }, status: :not_found
+  end
 
 end
