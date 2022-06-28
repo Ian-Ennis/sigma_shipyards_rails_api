@@ -17,13 +17,13 @@ Spaceship.create(spaceship_name: 'Rocinante', credits: 1_000_000, range: 0, stre
 puts 'Demo ship created'
 
 puts 'Creating engine parts...'
-EnginePart.create(part_name: 'Nuclear Reactor', range: 3, cost: 150_000)
-EnginePart.create(part_name: 'Fusion Reactor', range: 7, cost: 250_000)
-EnginePart.create(part_name: 'Antimatter Drive', range: 10, cost: 400_000)
+EnginePart.create(part_name: 'Nuclear Reactor', range: 3, cost: 40000)
+EnginePart.create(part_name: 'Fusion Reactor', range: 7, cost: 120000)
+EnginePart.create(part_name: 'Antimatter Drive', range: 10, cost: 200000)
 puts 'Engine parts created'
 
 puts 'Creating hull parts..'
-HullPart.create(part_name: 'Carbon Fiber', hull_strength: 5, cost: 20_000)
-HullPart.create(part_name: 'Graphene Matrix', hull_strength: 15, cost: 90_000)
-HullPart.create(part_name: 'Neutron Repulsor', hull_strength: 50, cost: 300_000)
+HullPart.create(part_name: 'Carbon Fiber', hull_strength: 5, cost: 10000)
+HullPart.create(part_name: 'Graphene Matrix', hull_strength: 15, cost: 30000)
+HullPart.create(part_name: 'Neutron Repulsor', hull_strength: 50, cost: 75000)
 puts 'Hull parts created'
