@@ -1,6 +1,6 @@
-# frozen_string_literal: true
-
 Rails.application.routes.draw do
+  root 'welcome#index'
+
   resource :users
   resources :hull_parts, only: [:index]
   resources :engine_parts, only: [:index]
