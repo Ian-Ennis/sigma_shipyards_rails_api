@@ -1,8 +1,5 @@
-# frozen_string_literal: true
-
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:create]
-  before_action :require_login, only: [:updated_at]
 
   def create
     puts '=== in Users create'
@@ -20,8 +17,6 @@ class UsersController < ApplicationController
       render json: { errors: user.errors.full_messages }, status: :not_acceptable
     end
   end
-
-  def updated_at; end
 
   private
 

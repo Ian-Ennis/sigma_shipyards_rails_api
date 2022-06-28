@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class StarSystemsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :star_systems_not_found
 
@@ -12,4 +10,5 @@ class StarSystemsController < ApplicationController
   def star_systems_not_found
     render json: { error: 'Systems not found' }, status: :not_found
   end
+  
 end

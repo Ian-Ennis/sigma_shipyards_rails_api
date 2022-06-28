@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class SpaceshipsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :unable_to_locate_spaceship
 
@@ -43,10 +41,11 @@ class SpaceshipsController < ApplicationController
 
   def spaceship_params_update
     params.permit(:spaceship_name, :credits, :range, :strength, :nuclearCount, :fusionCount, :antimatterCount,
-                  :carbonCount, :grapheneCount, :neutronCount)
+    :carbonCount, :grapheneCount, :neutronCount)
   end
 
   def unable_to_locate_spaceship
     render json: { error: 'Spaceship not found' }, status: :not_found
   end
+  
 end
