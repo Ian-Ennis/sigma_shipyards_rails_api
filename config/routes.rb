@@ -6,17 +6,17 @@ Rails.application.routes.draw do
       resources :users, only: [:create]
 
       post '/login', to: 'auth#create'
-      get '/profile', to: 'users#profile'
     end
   end
 
   resource :users
+  resources :spaceships
+
   resources :hull_parts, only: [:index]
   resources :engine_parts, only: [:index]
-  resources :spaceships
-  resources :star_systems
+  resources :star_systems, only: [:index]
 
   get '*path',
-      to: 'fallback#index',
-      constraints: ->(req) { !req.xhr? && req.format.html? }
+    to: 'fallback#index',
+    constraints: ->(req) { !req.xhr? && req.format.html? }
 end

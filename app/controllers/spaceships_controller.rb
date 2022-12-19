@@ -1,8 +1,10 @@
 class SpaceshipsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :unable_to_locate_spaceship
-
+  
   def index
-    render json: Spaceship.all, status: :ok
+    @user = current_user
+    @spaceships = @user.spaceships
+    render json: @spaceships, status: :ok
   end
 
   def create
@@ -35,7 +37,7 @@ class SpaceshipsController < ApplicationController
 
   def spaceship_params
     params
-      .permit(:spaceship_name, :credits, :range, :strength, :nuclearCount, :fusionCount, :antimatterCount, :carbonCount, :grapheneCount, :neutronCount)
+      .permit(:user_id, :spaceship_name, :credits, :range, :strength, :nuclearCount, :fusionCount, :antimatterCount, :carbonCount, :grapheneCount, :neutronCount)
       .with_defaults(credits: 1_000_000, range: 0, strength: 0, nuclearCount: 0, fusionCount: 0, antimatterCount: 0, carbonCount: 0, grapheneCount: 0, neutronCount: 0)
   end
 

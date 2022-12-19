@@ -11,7 +11,7 @@ class CreateSpaceships < ActiveRecord::Migration[7.0]
       t.integer :carbonCount
       t.integer :grapheneCount
       t.integer :neutronCount
-      t.references :user, type: :integer
+      t.references :user, type: :integer, foreign_key: true
 
       t.timestamps
     end
